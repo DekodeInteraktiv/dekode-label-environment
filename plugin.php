@@ -50,9 +50,9 @@ if ( \apply_filters( 'dekode_label_environment_enabled', true ) ) {
 		. 'top:88px;'
 		. '}'
 		. '@media screen and (max-width: 782px) {'
-        . 'body.admin-bar:after{' // Admin bar has 46px height on screen resolution 782px and less - bump label down.
-        . 'top:102px;'
-        . '}'
+		. 'body.admin-bar:after{' // Admin bar has 46px height on screen resolution 782px and less - bump label down.
+		. 'top:102px;'
+		. '}'
 		. '}';
 		echo '<style>' . $css . '</style>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
