@@ -1,0 +1,27 @@
+{
+  "name": "dekodeinteraktiv/dekode-label-environment",
+  "description": "Adds a banner to the frontend and an item to the admin bar informing about the server environment",
+  "type": "wordpress-muplugin",
+  "license": "GPL-3.0-or-later",
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "require-dev": {
+    "dekode/coding-standards": "4.0.0"
+  },
+  "scripts": {
+    "lint": [
+      "./vendor/bin/phpcs ."
+    ]
+  },
+  "archive": {
+    "exclude": [
+      ".gitignore",
+      "composer.lock",
+      "phpcs.xml.dist"
+    ]
+  }
+}
