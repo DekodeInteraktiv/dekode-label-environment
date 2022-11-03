@@ -44,10 +44,15 @@ if ( \apply_filters( 'dekode_label_environment_enabled', true ) ) {
 		. 'transform:rotate(-45deg);'
 		. 'transform-origin:bottom left;'
 		. 'width:112px;'
-		. 'z-index:99998;'
+		. 'z-index:50;'
 		. '}'
 		. 'body.admin-bar:after{' // Admin bar has 32px height - bump label down.
 		. 'top:88px;'
+		. '}'
+		. '@media screen and (max-width: 782px) {'
+        . 'body.admin-bar:after{' // Admin bar has 46px height on screen resolution 782px and less - bump label down.
+        . 'top:102px;'
+        . '}'
 		. '}';
 		echo '<style>' . $css . '</style>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
