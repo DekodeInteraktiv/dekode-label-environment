@@ -5,9 +5,9 @@
  * Description:     Adds a banner to the frontend and an item to the admin bar informing about the server environment
  * Author:          Dekode
  * Author URI:      https://dekode.no
- * Version:         1.0.0
+ * Version:         1.0.1
  *
- * @package         ProjectBank
+ * @package         Dekode-Label-Environment
  */
 
 declare( strict_types = 1 );
@@ -58,11 +58,13 @@ if ( \apply_filters( 'dekode_label_environment_enabled', true ) ) {
 	function add_banner_styles() {
 		$css = 'body:after{'
 		. 'align-items:center;'
-		. 'background-color:#000;'
-		. 'color:#fff;'
+		. 'background-color:#1d2327;'
+		. 'color:#f0f0f1;'
 		. 'content:"' . \wp_get_environment_type() . '";'
 		. 'display:flex;'
+		. 'font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;'
 		. 'font-size:12px;'
+		. 'font-weight:400;'
 		. 'left:0;'
 		. 'line-height:24px;'
 		. 'justify-content:center;'
@@ -72,6 +74,7 @@ if ( \apply_filters( 'dekode_label_environment_enabled', true ) ) {
 		. 'transform-origin:bottom left;'
 		. 'width:112px;'
 		. 'z-index:50;'
+		. '-webkit-font-smoothing:auto;'
 		. '}'
 		. 'body.admin-bar:after{' // Admin bar has 32px height - bump label down.
 		. 'top:88px;'
